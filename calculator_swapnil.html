@@ -24,28 +24,27 @@
         <div class="container border border-black p-3">
           
           <div class="row m-1 text-cen">
-            <div class="col-12 d-grid gap-2 border border-black rounded-2">
-              Result
+            <input id="display" class="col-12 d-grid gap-2 border border-black rounded-2">
+               <!-- Result  -->
               <br><br>
-            </div>
           </div>
 
           <div class="row">
 
             <div class="col-3 d-grid gap-2">
-              <button type="button" class="btn btn-secondary m-1 border border-black"><i class="fa-solid fa-plus"></i></button>
+              <button type="button" class="btn btn-secondary m-1 border border-black" onclick="appendToDisplay('+')"><i class="fa-solid fa-plus"></i></button>
             </div>
 
             <div class="col-3 d-grid gap-2">
-              <button type="button" class="btn btn-secondary m-1 border border-black"><i class="fa-solid fa-minus"></i></button>
+              <button type="button" class="btn btn-secondary m-1 border border-black" onclick="appendToDisplay('-')"><i class="fa-solid fa-minus"></i></button>
             </div>
 
             <div class="col-3 d-grid gap-2">
-              <button type="button" class="btn btn-secondary m-1 border border-black"><i class="fa-solid fa-xmark"></i></button>
+              <button type="button" class="btn btn-secondary m-1 border border-black" onclick="appendToDisplay('*')"><i class="fa-solid fa-xmark"></i></button>
             </div>
 
             <div class="col-3 d-grid gap-2">
-              <button type="button" class="btn btn-secondary m-1 border border-black"><i class="fa-solid fa-divide"></i></button>
+              <button type="button" class="btn btn-secondary m-1 border border-black" onclick="appendToDisplay('/')"><i class="fa-solid fa-divide"></i></button>
             </div>
 
           </div>
@@ -56,50 +55,50 @@
               <div class="row">
 
                 <div class="col-4 d-grid gap-2">
-                  <button type="button" class="btn btn-light m-1 border border-black"><i class="fa-solid fa-7"></i>
+                  <button type="button" class="btn btn-light m-1 border border-black" onclick="appendToDisplay('7')"><i class="fa-solid fa-7"></i>
                     </button></div>
                 <div class="col-4 d-grid gap-2">
-                  <button type="button" class="btn btn-light m-1 border border-black"><i class="fa-solid fa-8"></i></button>
+                  <button type="button" class="btn btn-light m-1 border border-black" onclick="appendToDisplay('8')"><i class="fa-solid fa-8"></i></button>
                 </div>
 
                 <div class="col-4 d-grid gap-2">
-                  <button type="button" class="btn btn-light m-1 border border-black"><i class="fa-solid fa-9"></i></button>
+                  <button type="button" class="btn btn-light m-1 border border-black" onclick="appendToDisplay('9')"><i class="fa-solid fa-9"></i></button>
                 </div>
 
                 <div class="col-4 d-grid gap-2">
-                  <button type="button" class="btn btn-light m-1 border border-black"><i class="fa-solid fa-4"></i></button>
+                  <button type="button" class="btn btn-light m-1 border border-black" onclick="appendToDisplay('4')"><i class="fa-solid fa-4"></i></button>
                 </div>
 
                 <div class="col-4 d-grid gap-2">
-                  <button type="button" class="btn btn-light m-1 border border-black"><i class="fa-solid fa-5"></i></button>
+                  <button type="button" class="btn btn-light m-1 border border-black" onclick="appendToDisplay('5')"><i class="fa-solid fa-5"></i></button>
                 </div>
 
                 <div class="col-4 d-grid gap-2">
-                  <button type="button" class="btn btn-light m-1 border border-black"><i class="fa-solid fa-6"></i></button>
+                  <button type="button" class="btn btn-light m-1 border border-black" onclick="appendToDisplay('6')"><i class="fa-solid fa-6"></i></button>
                 </div>
 
                 <div class="col-4 d-grid gap-2">
-                  <button type="button" class="btn btn-light m-1 border border-black"><i class="fa-solid fa-1"></i></button>
+                  <button type="button" class="btn btn-light m-1 border border-black" onclick="appendToDisplay('1')"><i class="fa-solid fa-1"></i></button>
                 </div>
 
                 <div class="col-4 d-grid gap-2">
-                  <button type="button" class="btn btn-light m-1 border border-black"><i class="fa-solid fa-2"></i></button>
+                  <button type="button" class="btn btn-light m-1 border border-black" onclick="appendToDisplay('2')"><i class="fa-solid fa-2"></i></button>
                 </div>
 
                 <div class="col-4 d-grid gap-2">
-                  <button type="button" class="btn btn-light m-1 border border-black"><i class="fa-solid fa-3"></i></button>
+                  <button type="button" class="btn btn-light m-1 border border-black" onclick="appendToDisplay('3')"><i class="fa-solid fa-3"></i></button>
                 </div>
 
                 <div class="col-4 d-grid gap-2">
-                  <button type="button" class="btn btn-light m-1 border border-black"><i class="fa-solid fa-0"></i></button>
+                  <button type="button" class="btn btn-light m-1 border border-black" onclick="appendToDisplay('0')"><i class="fa-solid fa-0"></i></button>
                 </div>
 
                 <div class="col-4 d-grid gap-2">
-                  <button type="button" class="btn btn-light m-1 border border-black"><i class="fa-solid fa-circle"></i></button>
+                  <button type="button" class="btn btn-light m-1 border border-black" onclick="appendToDisplay('.')"><i class="fa-solid fa-circle"></i></button>
                 </div>
 
                 <div class="col-4 d-grid gap-2">
-                  <button type="button" class="btn btn-light m-1 border border-black"><i class="fa-solid fa-c"></i></button>
+                  <button type="button" class="btn btn-light m-1 border border-black" onclick="clearDisplay()"><i class="fa-solid fa-c"></i></button>
                 </div>
 
               </div>
@@ -107,7 +106,7 @@
             </div>
 
             <div class="col-3 d-grid gap-3">
-              <button type="button" class="btn btn-primary m-1 border border-black" ><i class="fa-solid fa-equals"></i></button>
+              <button type="button" class="btn btn-primary m-1 border border-black" onclick="calculateResult()"><i class="fa-solid fa-equals"></i></button>
             </div>
 
           </div>
@@ -121,6 +120,33 @@
 
   </div>
   </div>
+  <script>
+    let displayValue = '';
+
+    function appendToDisplay(value) {
+      displayValue += value;
+      document.getElementById('display').value += value;
+    }
+
+    function clearDisplay() {
+      document.getElementById('display').value = '';
+    }
+
+    function calculateResult() {
+      try {
+        const display = document.getElementById('display');
+        display.value = eval(display.value);
+      } catch (error) {
+        alert('Invalid calculation');
+      }
+    }
+
+    
+
+
+  </script>
+
+
 </body>
 
 </html>
