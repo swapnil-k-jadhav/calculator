@@ -129,15 +129,22 @@
       const display = document.getElementById('display');
       const currentValue = display.value;
 
-      // Replace the last operator if a new operator is clicked
-     if (isOperator(value) && isOperator(currentValue.slice(-1))) {
-        display.value = currentValue.slice(0, -1) + value;
-      } else {
-        display.value += value;
+      // Check if the input is a valid number or operator
+    if (isValidInput(value)) {
+        // Replace the last operator if a new operator is clicked
+        if (isOperator(value) && isOperator(currentValue.slice(-1))) {
+            display.value = currentValue.slice(0, -1) + value;
+        } else {
+            display.value += value;
+        }
       }
     
     }
 
+    function isValidInput(char) {
+      return !isNaN(char) || isOperator(char) || char === '.';
+    }
+    
     function isOperator(char) {
       return ['+', '-', '*', '/'].includes(char);
     }
